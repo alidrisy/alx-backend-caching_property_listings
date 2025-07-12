@@ -7,6 +7,6 @@ from django.views.decorators.cache import cache_page
 
 # Create your views here.
 @cache_page(60 * 15)
-def property_list(request):
+def property_list():
     all_property = get_all_properties()
     return JsonResponse({"data": all_property})
